@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+require "str_convert_utils"
