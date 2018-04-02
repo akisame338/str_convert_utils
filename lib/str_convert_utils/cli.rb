@@ -5,12 +5,12 @@ module StrConvertUtils
   class CLI < Thor
     # see https://qiita.com/kumagi/items/04edfb73fd2f5a060510
 
-    desc "camelize", "convert {snake_case_string} to {camelCaseString}"
+    desc "camelize {snake_case_string}", "convert {snake_case_string} to {CamelCaseString}"
     def camelize(str)
       puts str.split("_").map{|w| w[0] = w[0].upcase; w}.join
     end
 
-    desc "snake", "convert {camelCaseString} to {snake_case_string}"
+    desc "snake {CamelCaseString}", "convert {CamelCaseString} to {snake_case_string}"
     def snake(str)
       puts str
         .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
